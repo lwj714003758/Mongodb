@@ -7,7 +7,8 @@
 - MongoDB CRUB Operations
 
 ## Install MongoDB On Linux
-- Configure repository.
+- Configure repository
+
 **Create an /etc/yum.repos.d/mongodb-enterprise.repo file so that you can install MongoDB enterprise directly, using yum.**
 
 ```
@@ -18,6 +19,7 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 ```
+
 - Install the MongoDB Enterprise packages
 
 **Install the 3.6 release candidate version of MongoDB Enterprise.**
