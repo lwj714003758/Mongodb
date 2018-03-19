@@ -6,7 +6,7 @@
 - MongoDB Shell
 - MongoDB CRUB Operations
 
-##Install MongoDB On Linux##
+## Install MongoDB On Linux
 - Configure repository.
 **Create an /etc/yum.repos.d/mongodb-enterprise.repo file so that you can install MongoDB enterprise directly, using yum.**
 
