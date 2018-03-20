@@ -70,12 +70,15 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
  
  - Configure SELinux
  - Data Directories and Permissions
-   
-    The MongoDB instance stores its data files in /var/lib/mongo and its log files in /var/log/mongodb by default, and runs using the mongod user account. You can specify alternate log and data file directories in /etc/mongod.conf. See systemLog.path and storage.dbPath for additional information.
 
-    If you change the user that runs the MongoDB process, you must modify the access control rights to the /var/lib/mongo and /var/log/mongodb directories to give this user access to these directories
+     The MongoDB instance stores its data files in /var/lib/mongo and its log files in /var/log/mongodb by default, and runs using the mongod user account. You can specify alternate log and data file directories in /etc/mongod.conf. See systemLog.path and storage.dbPath for additional information.
+     If you change the user that runs the MongoDB process, you must modify the access control rights to the /var/lib/mongo and /var/log/mongodb directories to give this user access to these directories
 
- - Start |Stop |Restart MongoDB 
+ - Start |Stop |Restart MongoDB
+ 
    `sudo service mongod start|stop|restart`
+
  - Begin using MongoDB
+
    `mongo --host 127.0.0.1:27017`
+
