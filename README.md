@@ -35,7 +35,6 @@ mongodb-org-tools	Contains the following MongoDB tools: mongoimport bsondump, mo
 
 ## Install MongoDB Community Edition
 
-
 - Configure the package management system (yum).
 
 *Create a /etc/yum.repos.d/mongodb-org-3.6.repo file so that you can install MongoDB directly, using yum.*
@@ -58,4 +57,25 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 
 *To install a specific release of MongoDB, specify each component package individually and append the version number to the package name, as in the following example:*
 
-`sudo yum install -y mongodb-org-3.6.3 mongodb-org-server-3.6.3 mongodb-org-shell-3.6.3 mongodb-org-mongos-3.6.3 mongodb-org-tools-3.6.3`
+```
+  sudo yum install -y mongodb-org-3.6.3 mongodb-org-server-3.6.3 mongodb-org-shell-3.6.3 mongodb-org-mongos-3.6.3 mongodb-org-tools-3.6.3
+```
+*You can specify any available version of MongoDB. However yum will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, pin the package. To pin a package, add the following exclude directive to your /etc/yum.conf file:*
+
+```
+  exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools
+```
+
+## Run MongoDB Community Edition
+ 
+ - Configure SELinux
+ - Data Directories and Permissions
+   
+    The MongoDB instance stores its data files in /var/lib/mongo and its log files in /var/log/mongodb by default, and runs using the mongod user account. You can specify alternate log and data file directories in /etc/mongod.conf. See systemLog.path and storage.dbPath for additional information.
+
+    If you change the user that runs the MongoDB process, you must modify the access control rights to the /var/lib/mongo and /var/log/mongodb directories to give this user access to these directories
+
+ - Start |Stop |Restart MongoDB 
+   `sudo service mongod start|stop|restart`
+ - Begin using MongoDB
+   `mongo --host 127.0.0.1:27017`
