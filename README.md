@@ -82,3 +82,11 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 
    `mongo --host 127.0.0.1:27017`
 
+ - Remove Packages
+
+     Remove any MongoDB packages that you had previously installed.
+
+```
+  sudo yum erase $(rpm -qa | grep mongodb-org)
+```
+
