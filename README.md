@@ -16,7 +16,7 @@ PLATFORM SUPPORT:
 ## Packages
 
 MongoDB provides officially supported packages in their own repository. This repository contains the following packages:
- 
+ ```
      Package Name	Description
 
       mongodb-org	A metapackage that will automatically install the four component packages listed below.
@@ -28,7 +28,7 @@ mongodb-org-mongos	Contains the mongos daemon.
 mongodb-org-shell	Contains the mongo shell.
 
 mongodb-org-tools	Contains the following MongoDB tools: mongoimport bsondump, mongodump, mongoexport, mongofiles, mongoperf, mongorestore, mongostat, and mongotop.
-
+```
 *The mongodb-org-server package provides an initialization script that starts mongod with the /etc/mongod.conf configuration file.*
 
 *The default /etc/mongod.conf configuration file supplied by the packages have bind_ip set to 127.0.0.1 by default. Modify this setting as needed for your environment before initializing a replica set.*
