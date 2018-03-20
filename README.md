@@ -38,10 +38,9 @@ mongodb-org-tools	Contains the following MongoDB tools: mongoimport bsondump, mo
 
 - Configure the package management system (yum).
 
-**Create a /etc/yum.repos.d/mongodb-org-3.6.repo file so that you can install MongoDB directly, using yum.**
+*Create a /etc/yum.repos.d/mongodb-org-3.6.repo file so that you can install MongoDB directly, using yum.*
 
-**For MongoDB 3.6 **
-
+**For MongoDB 3.6**
 
 ```
 [mongodb-org-3.6]
